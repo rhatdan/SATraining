@@ -172,4 +172,19 @@ sosreport
 ```
 Why wouldn't we include these commands in the Atomic image?
 
+The only thing we want to deploy on top of an atomic box is containers.  We have built an special Administrators shell container called rheltools.  You can install this using the atomic install command
+
+atomic install rhel-tools
+
+Now you can run processes on top of this container using atomic run.
+
+atomic run rhel-tools man tcpdump
+atomic run rhel-tools tcpdump 4.2.2.2
+
+Now you can explore the contents of the container by executing
+
+atomic run rhel-tools /bin/sh
+
+This is an example of a Super Privileged Container, which we will cover in the next Lab.
+
 This concludes the deploying Atomic lab.
