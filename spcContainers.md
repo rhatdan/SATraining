@@ -393,6 +393,7 @@ Change: 2015-02-25 01:40:07.042784999 +0000
 Linux 3.10.0-229.el7.x86_64 (atomic-00.localdomain) 	02/27/2015 	_x86_64_	(2 CPU)
 
 08:22:03 PM       LINUX RESTART
+```
 
 ### Building your own SPC
 
@@ -469,6 +470,7 @@ chroot ${HOST} /usr/bin/systemctl enable /etc/systemd/system/httpd_${NAME}.servi
 ```
 
 #### cat root/usr/bin/uninstall.sh
+
 ```
 cat root/usr/bin/uninstall.sh 
 #!/bin/sh
@@ -477,6 +479,7 @@ rm -f ${HOST}/etc/systemd/system/httpd_${NAME}.service
 ```
 
 #### cat root/etc/systemd/system/httpd_template.service
+
 ```
 [Unit]
 Description=The Apache HTTP Server for TEMPLATE
